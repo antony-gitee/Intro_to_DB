@@ -1,4 +1,4 @@
-import mysql.connector  # MUST be present
+import mysql.connector  
 from mysql.connector import Error
 
 def create_database():
@@ -12,8 +12,8 @@ def create_database():
 
         if connection.is_connected():
             cursor = connection.cursor()
-            cursor.execute("CREATE DATABASE IF NOT EXISTS alxbookstore")  
-            print("Database 'alxbookstore' created successfully!")
+            cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")  
+            print("Database 'alx_book_store' created successfully!")
             cursor.close()
 
     except Error as e:
